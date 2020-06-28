@@ -1,0 +1,32 @@
+# Manipulating Containers with the Docker Client
+
+docker run <image_name> aşağıdaki iki commandin birleşmesinden oluşur
+docker create <image_name>
+docker start -a <container-id>:detaylı log görmemizi sağlar.
+docker run <image_name> <commands>
+Listing running containers docker ps
+Listing all containers docker ps --all
+docker system prune -> remove all
+docker logs <container-id>
+docker stop <container-id> ,, send sigterm signal to clean up and some preparation like saving files etc.
+docker kill <container-id> ,, stop working right now
+
+
+Executing commands in running containers
+docker exec -it <container-id> <command> ,, docker exec -it 4081c97daabd redis-cli
+
+Getting command prompt in a container open shell on running container
+docker exec -it <container-id> sh 
+
+docker run -it <image_name> sh then
+
+ docker exec -it 4081c97daabd redis-cli -> redis-cli
+
+# Building Custom İmages Through Docker Server
+
+docker build .
+
+
+
+
+
