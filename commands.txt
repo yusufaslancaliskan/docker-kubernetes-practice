@@ -28,5 +28,18 @@ docker build .
 
 docker build -t <my_docker_id/projectName:version> .
 
+# Making Real Proects with Docker
 
+## Dockerfile Template
 
+1. Specify a base image
+2. Run some commands to install additional programs
+3. Specify a command to run on container startup
+
+## Copying Build Files
+
+copy <from_folder>  <to_folder> => copy ./ ./
+
+## Container Port Mapping
+
+docker run -p <out_of_container_port>: <container_port> <image_name>
