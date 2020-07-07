@@ -59,3 +59,17 @@ docker-compose up -d => launch in background
 docker-compose down => stop containers
 
 restart policies => no, always, on failure
+
+# Creating Production Grade Workflow
+
+docker build -f <dockerfile_name> . => docker build -f Dockerfile.dev .
+
+## Docker volume
+
+pwd => present working directory
+
+docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app <image_id>
+
+windows does not detect the changes => git bash
+
+winpty docker run -it -p 3000:3000 -v /app/node_modules -v "/$(PWD)":/app -e CHOKIDAR_USEPOLLING=true CONTAINER_ID
