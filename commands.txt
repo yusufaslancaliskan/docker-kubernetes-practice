@@ -73,3 +73,6 @@ docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app <image_id>
 windows does not detect the changes => git bash
 
 winpty docker run -it -p 3000:3000 -v /app/node_modules -v "/$(PWD)":/app -e CHOKIDAR_USEPOLLING=true CONTAINER_ID
+
+docker attach <image_id> => we can able to containers terminal
+
